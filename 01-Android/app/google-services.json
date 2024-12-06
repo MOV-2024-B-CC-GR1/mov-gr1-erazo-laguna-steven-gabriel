@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "986417888903",
+    "project_id": "steven-d8d59",
+    "storage_bucket": "steven-d8d59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986417888903:android:bf541ff108e23c3710c222",
+        "android_client_info": {
+          "package_name": "com.example.ccgr12024b_serazo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwHnU4q-1c5x1CPQ36bY4oNuljRZSBg90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

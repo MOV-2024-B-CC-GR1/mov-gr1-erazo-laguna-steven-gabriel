@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="102dp" />
+
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:hint="ID del zapato"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextTalla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Talla"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonGuardarZapato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Zapato" />
+
+    <Button
+        android:id="@+id/buttonMostrarZapatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Zapatos" />
+
+    <Button
+        android:id="@+id/buttonActualizarZapato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Zapato" />
+
+    <Button
+        android:id="@+id/buttonEliminarZapato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Zapato" />
+
+    <TextView
+        android:id="@+id/textViewZapatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zapatos guardados"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

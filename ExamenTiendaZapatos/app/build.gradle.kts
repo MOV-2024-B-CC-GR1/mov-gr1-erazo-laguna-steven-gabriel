@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tiendazapatos"
+    namespace = "com.example.zapatostiendaapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tiendazapatos"
+        applicationId = "com.example.zapatostiendaapp"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -59,10 +59,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -70,7 +66,18 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
-
+    implementation("org.osmdroid:osmdroid-android:6.1.16")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.compose.ui:ui:1.6.0")
+    implementation("androidx.compose.ui:ui-text:1.6.0")
+    implementation("androidx.compose.material3:material3:1.2.0")
+    implementation ("androidx.compose.ui:ui:1.4.0")
+    implementation ("androidx.compose.ui:ui-viewbinding:1.4.0")
 
 }

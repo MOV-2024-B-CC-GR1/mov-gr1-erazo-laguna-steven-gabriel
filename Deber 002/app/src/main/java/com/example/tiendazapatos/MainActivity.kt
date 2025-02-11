@@ -30,6 +30,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
+
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current // Obtener contexto para lanzar la actividad
@@ -66,3 +68,5 @@ fun MainScreenPreview() {
         MainScreen()
     }
 }
+
+

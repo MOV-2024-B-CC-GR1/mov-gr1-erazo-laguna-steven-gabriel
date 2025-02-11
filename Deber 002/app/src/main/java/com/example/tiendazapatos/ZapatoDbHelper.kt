@@ -15,7 +15,9 @@ class ZapatoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 $COLUMN_NOMBRE TEXT,
                 $COLUMN_TALLA TEXT,
                 $COLUMN_PRECIO REAL,
-                $COLUMN_CANTIDAD INTEGER
+                $COLUMN_CANTIDAD INTEGER,
+                $COLUMN_LATITUD REAL,
+                $COLUMN_LONGITUD REAL
             );
         """
         db?.execSQL(createTable)
@@ -34,6 +36,8 @@ class ZapatoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             put(COLUMN_TALLA, zapato.talla)
             put(COLUMN_PRECIO, zapato.precio)
             put(COLUMN_CANTIDAD, zapato.cantidad)
+            put(COLUMN_LATITUD, zapato.latitud)
+            put(COLUMN_LONGITUD, zapato.longitud)
         }
         return db.insert(TABLE_ZAPATOS, null, values)
     }
@@ -49,7 +53,9 @@ class ZapatoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             COLUMN_NOMBRE,
             COLUMN_TALLA,
             COLUMN_PRECIO,
-            COLUMN_CANTIDAD
+            COLUMN_CANTIDAD,
+            COLUMN_LATITUD,
+            COLUMN_LONGITUD
         )
 
         val cursor = db.query(
@@ -70,8 +76,10 @@ class ZapatoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                     val talla = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TALLA))
                     val precio = cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_PRECIO))
                     val cantidad = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_CANTIDAD))
+                    val latitud = cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LATITUD))
+                    val longitud = cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_LONGITUD))
 
-                    zapatos.add(Zapato(id, nombre, talla, precio, cantidad))
+                    zapatos.add(Zapato(id, nombre, talla, precio, cantidad,latitud,longitud))
                 } while (cursor.moveToNext())
             }
         }
@@ -107,5 +115,7 @@ class ZapatoDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_TALLA = "talla"
         const val COLUMN_PRECIO = "precio"
         const val COLUMN_CANTIDAD = "cantidad"
+        const val COLUMN_LATITUD = "latitud"
+        const val COLUMN_LONGITUD = "longitud"
     }
 }

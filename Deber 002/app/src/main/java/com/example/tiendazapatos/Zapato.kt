@@ -5,5 +5,7 @@ data class Zapato(
     val nombre: String,
     val talla: String,
     val precio: Double,
-    val cantidad: Int
+    val cantidad: Int,
+    val latitud: Double,
+    val longitud: Double
 )

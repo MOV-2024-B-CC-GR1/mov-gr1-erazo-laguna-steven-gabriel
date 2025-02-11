@@ -76,4 +76,10 @@
         android:text="Zapatos guardados"
         android:layout_marginTop="16dp"/>
 
+    <item
+        android:id="@+id/action_map"
+        android:title="Ver Mapa"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        app:showAsAction="always"/>
+
 </LinearLayout>
